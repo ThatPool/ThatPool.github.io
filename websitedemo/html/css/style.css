@@ -1,0 +1,83 @@
+/* @font-face {
+    font-family: SketchingUniverse;
+    src: url('../fonts/Sketching\ Universe.otf');
+} */
+
+*{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: url('../images/logo32_.png') 10 10, auto;
+
+    user-select: auto;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+::placeholder{
+    color: white;
+    /* padding-left: 10px; */
+}
+
+input{
+    height: 30px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-color: transparent;
+    border-radius: 5px;
+    color: white;
+    padding-left: 10px;
+}
+input[type="button"]{
+    background-color: rgba(240, 248, 255, 0.377);
+    color: black;
+}
+
+input:hover{
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+}
+
+td, tr, table{
+    text-align: center;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.button{
+    width: 100px;
+    height: 20px;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid white;
+    /* border-bottom: 1px solid white; */
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    color: white;
+    font-size: large;
+
+    transition: 0.1s;
+}
+.selected{
+    /* color: aqua; */
+    border-bottom: 2px solid aquamarine;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: larger;
+}
+
+.button:hover{
+    /* height: 17px; */
+    color: aqua;
+    border-bottom: 2px solid aquamarine;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: larger;
+}
+
+@keyframes rotatelogo{
+    0%, 10%       { transform: rotateY(0deg); }
+   90%, 100%     { transform: rotateY(360deg); }
+}
+
+@keyframes bringdown{
+    0% {transform: translateY(-1000px);}
+    100% {transform: translateY(0);}
+}
