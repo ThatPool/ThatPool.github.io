@@ -5,135 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./html/css/style.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
     <title>Emerald Games Store</title>
 
     <style>
-        html { 
-        /* background: url(./html/videos/background_trailer.webm) repeat center center fixed;  */
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-        #myVideo {
+        /* Add your existing styles here */
+
+        /* Loading bar styles */
+        #loading-bar-container {
             position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: #333;
+            z-index: 9999;
+        }
+
+        #loading-bar {
+            height: 100%;
+            width: 0;
+            background-color: #4CAF50;
         }
     </style>
 </head>
 <body>
-    <video autoplay muted loop id="myVideo" style="position:absolute;">
-        <source src="./html/videos/background_trailer.webm" type="video/mp4" style="min-width: 100%; min-height: 100%; width: auto; height: auto;">
-    </video>
-    <div class="head" style="display: flex; flex-direction: column; background-color: rgba(0, 0, 0, 0.3);">
-        <div style="display: flex; flex-direction: row; border: 1px solid white; border-radius: 3px; background-color: rgba(255, 255, 255, 0.3); width: 1920; height: 120px;">
-            <div style="width: 100px; height: 100px; padding: 10px; border-radius: 3px; background-color: rgba(0, 0, 0, 0.3);">
-                <img src="./html/images/logo.png" width="100px" height="100px" alt="Not found" style="animation: rotatelogo 5s infinite; animation-timing-function: ease-in-out; background-color: transparent;">
-            </div>
-            <div style="border-radius: 3px; margin: auto; display: flex; background-color: rgba(0, 0, 0, 0.3);">
-                <a class="button selected">STORE</a>
-                <a class="button" href="./pages/aboutus.html">ABOUT US</a>
-                <a class="button" href="./pages/support.html">SUPPORT</a>
-            </div>
-            <div style="border-radius: 3px; display: flex; flex-direction: column; border: 1px solid transparent; justify-content: space-between; background-color: rgba(0, 0, 0, 0.3);">
-                <a class="button" href="./pages/login.html">Login</a>
-                <a class="button" href="./pages/register.html">Sign Up</a>
-            </div>
-        </div>
+    <!-- Loading bar container -->
+    <div id="loading-bar-container">
+        <div id="loading-bar"></div>
     </div>
 
-    <div style="background-image: linear-gradient(to right, black, transparent);;
-    display: flex;
-    justify-content: space-between;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 10px;
-    padding: 5px;">
-        <h3 style="color: white; margin-left: 20px;">TOP SELLERS</h3>
-    </div>
-    
-    <div style="background-color: rgba(128, 128, 128, 0.6);
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 10px;
-    padding: 10px;">
-        <div style="margin:5px; width: 300px; height: 250px; border-radius: 10px; padding: 5px; border: 1px solid white; background-color: rgba(0, 0, 0, 0.3);">
-            <img src="./html/images/store/hitman.jpg" width="100%" height="180px" alt="Not found" style="border-radius: 5px; background-color: transparent; overflow: hidden;">
-            <h3 align="center" style="color: white;">HITMAN</h3>
-        </div>
-        
-        <div style="margin:5px; width: 300px; height: 250px; border-radius: 10px; padding: 5px; border: 1px solid white; background-color: rgba(0, 0, 0, 0.3);">
-            <img src="./html/images/store/gtav.jpg" width="100%" height="180px" alt="Not found" style="border-radius: 5px; background-color: transparent; overflow: hidden;">
-            <h3 align="center" style="color: white;">GRAND THEFT AUTO V</h3>
-        </div>
-        
-        <div style="margin:5px; width: 300px; height: 250px; border-radius: 10px; padding: 5px; border: 1px solid white; background-color: rgba(0, 0, 0, 0.3);">
-            <img src="./html/images/store/pubg.jpg" width="100%" height="180px" alt="Not found" style="border-radius: 5px; background-color: transparent; overflow: hidden;">
-            <h3 align="center" style="color: white;">PUBG: BATTLEGROUNDS</h3>
-        </div>
-        <div style="margin:5px; width: 300px; height: 250px; border-radius: 10px; padding: 5px; border: 1px solid white; background-color: rgba(0, 0, 0, 0.3);">
-            <img src="./html/images/store/cyberpunk2077.jpg" width="100%" height="180px" alt="Not found" style="border-radius: 5px; background-color: transparent; overflow: hidden;">
-            <h3 align="center" style="color: white;">CYBERPUNK 2077</h3>
-        </div>
-        <div style="margin:5px; width: 300px; height: 250px; border-radius: 10px; padding: 5px; border: 1px solid white; background-color: rgba(0, 0, 0, 0.3);">
-            <img src="./html/images/store/valorant.jpg" width="100%" height="180px" alt="Not found" style="border-radius: 5px; background-color: transparent; overflow: hidden;">
-            <h3 align="center" style="color: white;">VALORANT</h3>
-        </div>
-    </div>
-    
-    <div style="background-image: linear-gradient(to right, black, transparent);;
-    display: flex;
-    justify-content: space-between;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 10px;
-    padding: 5px;">
-        <h3 style="color: white; margin-left: 20px;">POPULAR NEW RELEASES</h3>
-    </div>
-    <div style="background-color: rgba(128, 128, 128, 0.6);
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 10px;
-    padding: 10px;">
-        <div style="margin:5px; width: 300px; height: fit-content; border-radius: 10px; padding: 5px; border: 1px solid white; background-color: rgba(0, 0, 0, 0.3);">
-            <img src="./html/images/store/nfsunbound.jpg" width="100%" height="100%" alt="Not found" style="border-radius: 5px; background-color: transparent; overflow: hidden;">
-            <h3 align="center" style="color: white;">NFS: UNBOUND</h3>
-        </div>
-        <div style="margin:5px; width: 300px; height: fit-content; border-radius: 10px; padding: 5px; border: 1px solid white; background-color: rgba(0, 0, 0, 0.3);">
-            <img src="./html/images/store/helloneighbor2.jpg" width="100%" height="100%" alt="Not found" style="border-radius: 5px; background-color: transparent; overflow: hidden;">
-            <h3 align="center" style="color: white;">HELLO NEIGHBOR 2</h3>
-        </div>
-        <div style="margin:5px; width: 300px; height: fit-content; border-radius: 10px; padding: 5px; border: 1px solid white; background-color: rgba(0, 0, 0, 0.3);">
-            <img src="./html/images/store/forza5.jpg" width="100%" height="100%" alt="Not found" style="border-radius: 5px; background-color: transparent; overflow: hidden;">
-            <h3 align="center" style="color: white;">FORZA HORIZON 5</h3>
-        </div>
-        <div style="margin:5px; width: 300px; height: fit-content; border-radius: 10px; padding: 5px; border: 1px solid white; background-color: rgba(0, 0, 0, 0.3);">
-            <img src="./html/images/store/stray.jpg" width="100%" height="100%" alt="Not found" style="border-radius: 5px; background-color: transparent; overflow: hidden;">
-            <h3 align="center" style="color: white;">STRAY</h3>
-        </div>
-        <div style="margin:5px; width: 300px; height: fit-content; border-radius: 10px; padding: 5px; border: 1px solid white; background-color: rgba(0, 0, 0, 0.3);">
-            <img src="./html/images/store/plaguetalerequim.jpg" width="100%" height="100%" alt="Not found" style="border-radius: 5px; background-color: transparent; overflow: hidden;">
-            <h3 align="center" style="color: white;">PLAGUE TALE: REQUIM</h3>
-        </div>
-    </div>
+    <!-- Your existing content here -->
+
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState === "complete") {
+                // Page is fully loaded, hide the loading bar
+                document.getElementById('loading-bar-container').style.display = 'none';
+            }
+        };
+
+        // Track loading progress
+        window.addEventListener('load', function () {
+            var loadingBar = document.getElementById('loading-bar');
+            var progressBarWidth = 0;
+
+            function updateProgressBar() {
+                progressBarWidth += 1;
+                loadingBar.style.width = progressBarWidth + '%';
+            }
+
+            var progressInterval = setInterval(function () {
+                updateProgressBar();
+                if (progressBarWidth >= 100) {
+                    clearInterval(progressInterval);
+                }
+            }, 20);
+        });
+    </script>
 </body>
 </html>
